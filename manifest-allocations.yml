@@ -2,11 +2,14 @@ applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
-  - route: allocations-pal-{UNIQUE_IDENTIFIER}.apps.chicken.pal.pivotal.io
-  memory: 1G
+  - route: allocations-pal-sushilwipro.apps.pal.pivotal.io
+  memory: 500M
+  disk_quota: 500M
   instances: 1
-  env:gradlew bootRun --parallel
-    REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
+  env:
+    JAVA_OPTS: '-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
+    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-sushil-pcf.cfapps.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-allocations-database
+
