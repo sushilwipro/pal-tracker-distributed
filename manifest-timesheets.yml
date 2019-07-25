@@ -2,13 +2,13 @@ applications:
 - name: tracker-timesheets
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
-  - route: timesheets-pal-sushilwipro.apps.pal.pivotal.io
+  - route: timesheets-pal-sushilwipro.cfapps.io
   mmemory: 500M
     disk_quota: 500M
   instances: 1
   env:
     JAVA_OPTS: '-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
-    REGISTRATION_SERVER_ENDPOINT: https://timesheets-pal-sushil-pcf.cfapps.io
+    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-sushilwipro.cfapps.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-timesheets-database
