@@ -1,6 +1,6 @@
 applications:
   - name: tracker-registration
-    path: ./applications/backlog-server/build/libs/backlog-server.jar
+    path: ./applications/backlog-server/build/libs/registration-server.jar
     routes:
       - route: registration-pal-sushilwipro.cfapps.io
     memory: 500M
