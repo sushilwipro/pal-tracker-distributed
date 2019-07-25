@@ -1,6 +1,6 @@
 applications:
 - name: tracker-registration
-  path: ./applications/backlog-server/build/libs/registration-server.jar
+  path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-sushilwipro.cfapps.io
   memory: 500M
@@ -11,5 +11,4 @@ applications:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-registration-database
-
 
