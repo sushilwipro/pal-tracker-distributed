@@ -7,9 +7,10 @@ applications:
   disk_quota: 300M
   instances: 1
   env:
-    JAVA_OPTS: '-XX:MaxMetaspaceSize=200M -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
+    JAVA_OPTS: '-XX:MaxMetaspaceSize=100M -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-registration-database
   - tracker-circuit-breaker-dashboard
+  - tracker-service-registry
 
