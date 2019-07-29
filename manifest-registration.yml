@@ -3,12 +3,13 @@ applications:
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-sushilwipro.cfapps.io
-  memory: 300M
-  disk_quota: 300M
+  memory: 500M
+  disk_quota: 500M
   instances: 1
   env:
-    JAVA_OPTS: '-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
+    JAVA_OPTS: '-XX:MaxMetaspaceSize=200M -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-registration-database
+  - tracker-circuit-breaker-dashboard
 
