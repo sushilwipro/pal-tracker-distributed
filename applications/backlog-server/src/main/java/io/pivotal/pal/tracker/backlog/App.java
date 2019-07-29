@@ -11,6 +11,7 @@ import java.util.TimeZone;
 
 
 @SpringBootApplication
+@EnableCircuitBreaker
 @ComponentScan({"io.pivotal.pal.tracker.backlog", "io.pivotal.pal.tracker.restsupport"})
 public class App {
 

@@ -3,8 +3,8 @@ applications:
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocations-pal-sushilwipro.cfapps.io
-  memory: 500M
-  disk_quota: 500M
+  memory: 300M
+  disk_quota: 300M
   instances: 1
   env:
     JAVA_OPTS: '-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
